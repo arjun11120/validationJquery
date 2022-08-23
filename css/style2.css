@@ -1,0 +1,137 @@
+*{
+  	margin:0;
+  	padding:0;
+}
+.container{
+   	display: flex;
+}
+body{
+  	background-color: #cccccc;
+}
+.box1{
+    	background: white;
+   	margin: 60 auto;
+	padding: 20px;
+    	border-radius: 20px;
+}
+.box1 h1{
+  	vertical-align: center;
+  	font-size: 19px;
+  	text-align: center;
+  	margin-top: 30px;
+  	color:#8c8c8c;
+  	text-decoration: underline;
+}
+.input-container{
+  	color: #8c8c8c;
+  	margin: 20px 50px;
+  	padding: 10px;
+  	border-radius: 5px;
+  	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	display: flex;
+  	border-left: 3px solid rgb(1, 49, 147);
+}
+.input-container input,textarea{
+  	padding: 5px 30px;
+  	vertical-align: bottom;
+  	width: 87%;
+  	border: none;
+  	border-left: 2px solid #8c8c8c;
+}
+.input-container input:focus ,.input-container textarea:focus {
+  	outline: none;
+  	box-shadow: none;
+}
+.input-container span{
+  	padding: 0px 10px;
+}
+.rf-1{
+   padding: 10px 25px;
+   	color: #8c8c8c;
+}
+.rf-1 a{
+  	float: right;
+   	text-decoration: none;
+   	color: #8c8c8c;
+}
+.btn1{
+    text-align: center;
+   	padding: 15px;
+}
+.btn1 p{
+   	display: inline-block;
+    vertical-align: super;
+}
+#log-button{
+   	font-weight: 700;
+   	color: white;
+   	background: #013193;
+   	padding: 6px 12px;
+   	border: none;
+   	border-radius: 5px;
+}
+
+ntent{
+   	color: white;
+    text-align: center;
+    padding: 158px 0px 0px 160px;
+}
+.content span{
+   	font-size: 20px;
+}
+.content p{
+    padding: 10px;
+   	font-weight: 600;
+}
+#sn-btn{
+   	text-align: center;
+   	padding:10px 15px;
+   	color: #ffffff;
+   	background: #0146bf;
+   	border: none;
+   	border-radius: 5px;
+    margin-top: 74px;
+}
+.btn1{
+    text-align: center;
+    margin-left: 32%;
+    padding: 15px;
+    display: flex;
+}
+.btn1 p{
+    display: inline-block;
+    vertical-align: super;
+}
+#log-button{
+    font-weight: 700;
+    color: white;
+    background: #013193;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+}
+.btn1-in input{
+    border-radius: 5px 0px 0px 5px;
+    padding: 11px 0px 10px 10px;
+    background: #0146bf;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn1-spn span{
+    border-radius: 0px 5px 5px 0px;
+    background: #0146bf;
+    color: white;
+    padding: 6px;
+}
+input:focus { 
+    outline: none; 
+}
+.input-container #show{
+    width: 3%;
+    margin: 0px 10px !important;
+    height: 18px !important;
+}
+.ca1 input{
+    width: 10% !important;
+}
