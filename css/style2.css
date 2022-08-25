@@ -71,7 +71,7 @@ body{
    	border-radius: 5px;
 }
 
-ntent{
+.content{
    	color: white;
     text-align: center;
     padding: 158px 0px 0px 160px;
@@ -134,4 +134,12 @@ input:focus {
 }
 .ca1 input{
     width: 10% !important;
+}
+.error{
+    margin-left:10%;
+    display:none;
+    color:red;
+}
+.pass{
+	border-bottom:1px solid red;
 }

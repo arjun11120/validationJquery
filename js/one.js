@@ -12,37 +12,96 @@ $(document).on("click","#submit",function(){
 });
 $(document).on("blur","#username",function(){
 	var username = $("#username").val();
-	if (username == ""){
-    				alert("Please enter your name");
-  			}
+	if((username.trim()).length == 0){
+		$("#errorMessageUser").show(500);
+		$(".un1").addClass("pass");
+		
+	}
 	else{
+		$("#errorMessageUser").hide()
+		$(".un1").removeClass("pass");
 		return true;
 	}
 });
+$(document).on("blur","#username",function(){
+	var username = $("#username").val();
+	if((username.trim()).length == 0){
+		$("#errorMessageUser").show(100);
+		$(".un1").addClass("pass");
+		
+	}
+	else{
+		$("#errorMessageUser").hide()
+		$(".un1").removeClass("pass");
+		return true;
+	}
+});
+
 $(document).on("blur","#email",function(){
 	var email = $("#email").val();
-	if (email == ""){
-    				alert("Please enter your name");
+	var emailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if((email.trim()).length == 0){
+		$("#errorMessageEmail1").show(100);
+		$(".un2").addClass("pass");
+		$("#errorMessageEmail2").hide()
+		
+	}
+	else if (!email.match(emailformat))
+  			{
+				$("#errorMessageEmail2").show(100);
+				$(".un2").addClass("pass");
+				$("#errorMessageEmail1").hide()
   			}
 	else{
+		$("#errorMessageEmail1").hide()
+		$("#errorMessageEmail2").hide()
+		$(".un2").removeClass("pass");
 		return true;
 	}
 });
 $(document).on("blur","#password",function(){
 	var password = $("#password").val();
-	if (password == ""){
-    				alert("Please enter your password");
+        var passwordformat=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+	if((password.trim()).length == 0){
+		$("#errorMessagePassword1").show(100);
+		$("#errorMessagePassword2").hide();
+		$(".un3").addClass("pass");
+		
+	}
+	else if (!password.match(passwordformat))
+  			{
+				$("#errorMessagePassword2").show(100);
+				$(".un3").addClass("pass");
+				$("#errorMessagePassword1").hide();
   			}
 	else{
+		$("#errorMessagePassword1").hide();
+		$("#errorMessagePassword2").hide();
+		$(".un3").removeClass("pass");
 		return true;
 	}
 });
-$(document).on("blur","#address",function(){
-	var address = $("#address").val();
-	if (address == ""){
-    				alert("Please enter your address");
+$(document).on("blur","#phonenumber",function(){
+	var phonenumber = $("#phonenumber").val();
+        var numberformat=/^\d{10}$/;
+	if((phonenumber.trim()).length == 0){
+		$("#errorMessagephonenumber1").show(100);
+		$("#errorMessagephonenumber2").hide();
+		$(".un3").addClass("pass");
+		
+	}
+	else if (!phonenumber.match(numberformat))
+  			{
+				$("#errorMessagePassword2").show(100);
+				$(".un3").addClass("pass");
+				$("#errorMessagePassword1").hide();
   			}
 	else{
+		$("#errorMessagePassword1").hide();
+		$("#errorMessagePassword2").hide();
+		$(".un3").removeClass("pass");
 		return true;
 	}
 });
+
+

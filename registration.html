@@ -1,7 +1,6 @@
 <html>
  <head>
     <title>Form validation</title>
-    <link rel="icon" type="image/x-icon" href="images/black-bg-icon.png">
     <link rel="stylesheet" href="css/style2.css">   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="asset/jy.js"></script>   
@@ -15,23 +14,30 @@
 				<div class="frm-title">
 					<h1>Form Validation</h1>
 				</div>
-				<div class="input-container">
+				<div class="input-container un1">
     					<span class="material-symbols-outlined">person</span>
     					<input class="input-field" type="text" placeholder="Enter your name" id="username">
   				</div>
-				<div class="input-container">   					
+				<span class="error" id="errorMessageUser">Field is empty ...! Please enter your name</span>
+				<div class="input-container un2">   					
 					<span class="material-symbols-outlined">email</span>
     					<input class="input-field" type="text" placeholder="Enter your Email" id="email">
-  				</div>			
-				<div class="input-container">
+  				</div>
+				<span class="error" id="errorMessageEmail1">Field is empty ...! Please enter your Email Address</span>
+				<span class="error" id="errorMessageEmail2">Please enter your valid Email Address</span>				
+				<div class="input-container un3">
     					<span class="material-symbols-outlined">key</span>
 					<input class="input-field"  name="pswd" type="password" placeholder="Enter your password" id="password">
 					<input id="show" type="checkbox" onclick="myFunction()">Show Password
   				</div>
+				<span class="error" id="errorMessagePassword1">Field is empty ...! Please enter your Password</span>	
+				<span class="error" id="errorMessagePassword2">Wrong...!..invalid password</span>	
 				<div class="input-container">
     					<span class="material-symbols-outlined">phone_iphone</span>
     					<input class="input-field" type="text" placeholder="Enter your Phone number" name="phnum" id="phonenumber" >
   				</div>
+				<span class="error" id="errorMessagePassword1">Field is empty ...! Please enter your Password</span>	
+				<span class="error" id="errorMessagePassword2">Wrong...!..invalid password</span>
 				<div class="input-container">
     					<span class="material-symbols-outlined">phone_iphone</span>
     					<textarea class="input-field" type="text" placeholder="Enter your Address" name="address" id="address"></textarea>
