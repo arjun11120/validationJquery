@@ -1,3 +1,9 @@
+$(document).ready( function() {
+  $("#myForm").on('submit', function(e){
+     e.preventDefault();
+});
+})
+  
 $(document).on("click","#submit",function(){
 	var username = $("#username").val();
 	var password = $("#password").val();
@@ -9,12 +15,14 @@ $(document).on("click","#submit",function(){
 	else{
 		return true;
 	}
+	
 });
 $(document).on("blur","#username",function(){
 	var username = $("#username").val();
 	if((username.trim()).length == 0){
-		$("#errorMessageUser").show(500);
+		$("#errorMessageUser").show(100);
 		$(".un1").addClass("pass");
+		return false;
 		
 	}
 	else{
@@ -23,6 +31,7 @@ $(document).on("blur","#username",function(){
 		return true;
 	}
 });
+
 $(document).on("blur","#username",function(){
 	var username = $("#username").val();
 	if((username.trim()).length == 0){
@@ -44,6 +53,7 @@ $(document).on("blur","#email",function(){
 		$("#errorMessageEmail1").show(100);
 		$(".un2").addClass("pass");
 		$("#errorMessageEmail2").hide()
+		return false;
 		
 	}
 	else if (!email.match(emailformat))
@@ -51,6 +61,7 @@ $(document).on("blur","#email",function(){
 				$("#errorMessageEmail2").show(100);
 				$(".un2").addClass("pass");
 				$("#errorMessageEmail1").hide()
+				return false;
   			}
 	else{
 		$("#errorMessageEmail1").hide()
@@ -66,6 +77,7 @@ $(document).on("blur","#password",function(){
 		$("#errorMessagePassword1").show(100);
 		$("#errorMessagePassword2").hide();
 		$(".un3").addClass("pass");
+		return false;
 		
 	}
 	else if (!password.match(passwordformat))
@@ -73,6 +85,7 @@ $(document).on("blur","#password",function(){
 				$("#errorMessagePassword2").show(100);
 				$(".un3").addClass("pass");
 				$("#errorMessagePassword1").hide();
+				return false;
   			}
 	else{
 		$("#errorMessagePassword1").hide();
@@ -85,23 +98,45 @@ $(document).on("blur","#phonenumber",function(){
 	var phonenumber = $("#phonenumber").val();
         var numberformat=/^\d{10}$/;
 	if((phonenumber.trim()).length == 0){
-		$("#errorMessagephonenumber1").show(100);
-		$("#errorMessagephonenumber2").hide();
-		$(".un3").addClass("pass");
+		$("#errorMessagePhonenumber1").show(100);
+		$("#errorMessagePhonenumber2").hide();
+		$(".un4").addClass("pass");
+		return false;
 		
 	}
 	else if (!phonenumber.match(numberformat))
   			{
-				$("#errorMessagePassword2").show(100);
-				$(".un3").addClass("pass");
-				$("#errorMessagePassword1").hide();
+				$("#errorMessagePhonenumber2").show(100);
+				$(".un4").addClass("pass");
+				$("#errorMessagePhonenumber1").hide();
+				return false;
   			}
 	else{
-		$("#errorMessagePassword1").hide();
-		$("#errorMessagePassword2").hide();
-		$(".un3").removeClass("pass");
+		$("#errorMessagePhonenumber1").hide();
+		$("#errorMessagePhonenumber2").hide();
+		$(".un4").removeClass("pass");
 		return true;
 	}
 });
-
+$(document).on("blur","#address",function(){
+	var address = $("#address").val();
+	if((address.trim()).length == 0){
+		$("#errorMessageAddress").show(100);
+		$(".un5").addClass("pass");
+		return false;
+		
+	}
+	else{
+		$("#errorMessageAddress").hide();
+		$(".un5").removeClass("pass");
+		return true;
+	}
+});
+$(document).on("click","#show",function(){
+	if($('#show').is(':checked'))	{
+ 		$("#password").attr('type','text'); 
+	} else {
+		$("#password").attr('type','password'); 
+	}
+});
 
